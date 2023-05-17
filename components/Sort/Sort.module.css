@@ -1,0 +1,30 @@
+.SortIcon {
+  display: none;
+}
+
+.active .SortIcon {
+  display: block;
+  margin-right: 8px;
+}
+
+.sort {
+  display: inline-block;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+}
+.sort span {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+.sort .active {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.sort span:not(.active) {
+  grid-template-columns: 1fr;
+}/*# sourceMappingURL=Sort.module.css.map */

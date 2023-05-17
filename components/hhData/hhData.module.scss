@@ -1,0 +1,72 @@
+.hh {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  .Count {
+    padding: 20px;
+    text-align: center;
+    .CountValue {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 49px;
+      color: var(--primary);
+    }
+  }
+  .salary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    text-align: center;
+    gap: 20px 0;
+    .salaryValue {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 35px;
+      margin-bottom: 10px;
+    }
+  }
+  .salary > div {
+    border-right: 1px solid var(--gray-light);
+  }
+  .salary > div:last-child {
+    border-right: none;
+  }
+}
+.title {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+.rate {
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  gap: 10px;
+  justify-content: center;
+  .filled circle {
+    fill: var(--red);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hh {
+    .salary {
+      grid-template-columns: 1fr;
+    }
+    .salary > div {
+      border-right: none;
+      border-bottom: 1px solid var(--gray-light);
+      padding: 20px;
+    }
+    .salary > div:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hh {
+    grid-template-columns: 1fr;
+  }
+}
