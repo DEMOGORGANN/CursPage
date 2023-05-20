@@ -34,9 +34,9 @@
   line-height: 16px;
 }
 
-.secondLevelBlock:last-child {
-  margin-bottom: 20px;
-}
+// .secondLevelBlock:last-child {
+//   margin-bottom: 20px;
+// }
 
 .thirdLevel {
   margin-bottom: 10px;
@@ -53,12 +53,5 @@
   color: var(--primary);
 }
 .secondLevelBlock {
-  display: none;
-}
-
-.secondLevelBlockOpened {
-  display: block;
-}
-.secondLevelBlockOpened:last-child {
-  margin-bottom: 20px;
+  overflow: hidden;
 }

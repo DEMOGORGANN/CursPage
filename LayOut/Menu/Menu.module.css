@@ -36,10 +36,6 @@
   line-height: 16px;
 }
 
-.secondLevelBlock:last-child {
-  margin-bottom: 20px;
-}
-
 .thirdLevel {
   margin-bottom: 10px;
   cursor: pointer;
@@ -56,13 +52,5 @@
 }
 
 .secondLevelBlock {
-  display: none;
-}
-
-.secondLevelBlockOpened {
-  display: block;
-}
-
-.secondLevelBlockOpened:last-child {
-  margin-bottom: 20px;
+  overflow: hidden;
 }/*# sourceMappingURL=Menu.module.css.map */
