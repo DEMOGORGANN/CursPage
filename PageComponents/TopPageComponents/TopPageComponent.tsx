@@ -37,7 +37,7 @@ export function TopPageComponent({
         <Sort sort={sort} setSort={setSort} />
       </div>
       <div className={styles.productWrap}>
-        {sortedProducts && sortedProducts.map((p) => <Product key={p._id} product={p} />)}
+        {sortedProducts && sortedProducts.map((p) => <Product layout key={p._id} product={p} />)}
       </div>
       <div className={styles.hhTitle}>
         <Htag tag="h2">Вакансии - {page.category}</Htag>

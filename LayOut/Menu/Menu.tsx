@@ -16,7 +16,7 @@ export function Menu(): JSX.Element {
     visible: {
       marginBottom: 20,
       transition: {
-        when: 'beforeChiildren',
+        when: 'beforeChildren',
         staggerChildren: 0.1,
       },
     },
@@ -27,7 +27,7 @@ export function Menu(): JSX.Element {
   const variantsChildren = {
     visible: {
       opacity: 1,
-      height: 39,
+      height: 40,
     },
     hidden: {
       opacity: 0,
