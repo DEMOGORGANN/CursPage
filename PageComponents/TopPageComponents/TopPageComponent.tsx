@@ -26,7 +26,6 @@ export function TopPageComponent({ page, products, firstCategory }: TopPageCompo
 
   return (
     <div className={styles.wrapper}>
-      {y}
       <div className={styles.title}>
         <Htag tag="h1">{page.title}</Htag>
         {products && (
