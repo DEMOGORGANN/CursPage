@@ -6,16 +6,15 @@ import { TopLevelCategory } from '@/interfaces/topPage.interface';
 import { SortEnum } from '@/components/Sort/Sort.props';
 import { useEffect, useReducer } from 'react';
 import { sortReducer } from './sort.reducer';
+import { useScrollY } from '@/hooks/useScrollY';
 
-export function TopPageComponent({
-  page,
-  products,
-  firstCategory,
-}: TopPageComponentProps): JSX.Element {
+export function TopPageComponent({ page, products, firstCategory }: TopPageComponentProps): JSX.Element {
   const [{ products: sortedProducts, sort }, dispathSort] = useReducer(sortReducer, {
     products,
     sort: SortEnum.Rating,
   });
+
+  const y = useScrollY();
 
   const setSort = (sort: SortEnum) => {
     dispathSort({ type: sort });
@@ -27,6 +26,7 @@ export function TopPageComponent({
 
   return (
     <div className={styles.wrapper}>
+      {y}
       <div className={styles.title}>
         <Htag tag="h1">{page.title}</Htag>
         {products && (
@@ -52,9 +52,7 @@ export function TopPageComponent({
           <Advantages advantages={page.advantages} />
         </>
       )}
-      {page.seoText && (
-        <div className={styles.Seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />
-      )}
+      {page.seoText && <div className={styles.Seo} dangerouslySetInnerHTML={{ __html: page.seoText }} />}
       <Htag tag="h2">Получаемые навыки</Htag>
       {page.tags.map((t) => (
         <div key={t}>
